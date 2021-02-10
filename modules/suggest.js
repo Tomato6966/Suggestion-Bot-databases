@@ -63,13 +63,13 @@ module.exports = (client) => {
       }
       const args = message.content.split(" ");
       let reason = "No reason";
-      if(!args) return message.reply("Useage: \`suggest <suggest_id> <approve / deny / maybe>\`")
+      if(!args) return message.reply("Useage: \`suggest <approve / deny / maybe> <suggest_id>\`")
       //wenn kein grund
-      if (!args[1]) return message.reply("Please add a method:  `approve` / `deny` / `maybe`\nUseage: \`suggest <suggest_id> <approve / deny / maybe>\`");
+      if (!args[1]) return message.reply("Please add a method:  `approve` / `deny` / `maybe`\nUseage: \`suggest <approve / deny / maybe> <suggest_id>\`");
       //wenn keine nachrichts id
-      if (!args[2]) return message.reply("Please add a suggestions message id Example Command: `>>suggest approve 778600880403644426 Good idea!`\nUseage: \`suggest <suggest_id> <approve / deny / maybe>\`");
+      if (!args[2]) return message.reply("Please add a suggestions message id Example Command: `>>suggest approve 778600880403644426 Good idea!`\nUseage: \`suggest <approve / deny / maybe> <suggest_id>\`");
       //wenn kein grund dann nix
-      if(args[2].length !== 18) return message.reply("It seems that the suggestion doesnt exist! An ID is 18 letters big.\nUseage: \`suggest <suggest_id> <approve / deny / maybe>\`");
+      if(args[2].length !== 18) return message.reply("It seems that the suggestion doesnt exist! An ID is 18 letters big.\nUseage: \`suggest <approve / deny / maybe> <suggest_id>\`");
       if(!args[3]) reason = "No reason";
       //wenn grund dann setze ihn
       else reason = args.slice(3).join(" ");
