@@ -5,7 +5,7 @@ module.exports = {
     aliases: ["feedback"],
     category: "admin",
     description: "Approves, denies or maybies a suggestion",
-    usage: "suggest <suggest_id> <approve / deny / maybe>",
+    usage: "suggest <approve / deny / maybe> <suggest_id>",
     run: async (client, message, args) => {
        //FROM THE MODULE
     }
